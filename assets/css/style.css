@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    --Laranja-total-1-hex: #F28705;
+    --Laranja-total-2-hex: #733702;
+    --Laranja-total-3-hex: #562600;
+    --Laranja-total-4-hex: #260B01;
+    --Laranja-total-5-hex: #F2F2F2;    
+}
+body{
+    background-color: var(--Laranja-total-2-hex);
+
+}
+.header{
+    background-color: var(--Laranja-total-3-hex);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10%;
+    color: var(--Laranja-total-5-hex);
+    align-items: center;
+}
+h1{
+    text-transform: uppercase;
+    font-size: 1.8em;
+}
+header div p{
+    padding-left: 38px;
+    font-size: 1.2em;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+}
+nav ul li{
+    padding-left: 18px;
+}
+a{
+    text-decoration: none;
+    color: var(--Laranja-total-5-hex);
+    font-size: 1.4em;
+    text-transform: capitalize;
+}
+a:hover{
+    border-bottom: 1px solid var(--Laranja-total-5-hex);
+    font-size: 1.6em;
+}
+main{
+    margin: 110px 10%;
+}
+main div{
+    display: inline-block;
+    width: 49%;
+}
