@@ -8,11 +8,9 @@
     --Laranja-total-4-hex: #260B01;
     --Laranja-total-5-hex: #F2F2F2;    
 }
-body{
-    background-color: var(--Laranja-total-2-hex);
-}
+
 .header{
-    background-color: var(--Laranja-total-3-hex);
+    background-color: #000;
     display: flex;
     justify-content: space-between;
     padding: 10px 10%;
@@ -31,7 +29,7 @@ nav ul{
     display: flex;
     list-style: none;
 }
-nav ul li{
+nav > ul > li{
     padding-left: 18px;
 }
 a{
@@ -50,24 +48,55 @@ a:hover{
     transition-timing-function: linear;
 }
 main{
-    margin: 90px 10%;
+    margin: 90px 20%;
 }
-main div{
-    display: inline-block;
-    width: 49%;
-}
-.about-me{
-    color: #F2F2F2;
-}
+
 .about-me h2{
     font-size: 2.8em;
     text-transform: capitalize;
     margin-bottom: 10px;
-    color: #fff;
 }
 .about-me p{
     font-size: 1.8em;
     text-align: justify;
     text-indent: 1em;
     margin-bottom: 28px;
+}
+/* .accordion{
+    max-width: 100%;
+} */
+.accordion .contentBx{
+    position: relative;
+    margin-bottom: 10px;
+}
+.accordion .contentBx .label{
+    position: relative;
+    padding: 18px;
+    border-radius: 1.3rem;
+    background-color: #e2e2e2;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1.4em;
+}
+.accordion .contentBx .label::before{
+    content: '+';
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    font-size: 1.5em;
+}
+.accordion .contentBx.active .label::before{
+    content: '-';
+}
+.accordion .contentBx .content{
+    position: relative;
+    background-color: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+.accordion .contentBx.active .content{
+    height: 150px;
+    padding: 10px;
 }
