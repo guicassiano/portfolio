@@ -16,6 +16,7 @@
     padding: 10px 10%;
     color: var(--Laranja-total-5-hex);
     align-items: center;
+    border-bottom: 4px solid #F28705;
 }
 h1{
     text-transform: uppercase;
@@ -48,10 +49,10 @@ a:hover{
     transition-timing-function: linear;
 }
 main{
-    margin: 90px 20%;
+    margin: 90px 10%;
 }
 
-.about-me h2{
+.about-me h2, .projetos h2{
     font-size: 2.8em;
     text-transform: capitalize;
     margin-bottom: 10px;
@@ -67,16 +68,17 @@ main{
 } */
 .accordion .contentBx{
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .accordion .contentBx .label{
     position: relative;
     padding: 18px;
-    border-radius: 1.3rem;
+    border-radius: 10px 10px 0 0;
     background-color: #e2e2e2;
     cursor: pointer;
     font-weight: bolder;
     font-size: 1.4em;
+    border-bottom: 3px solid #F28705;
 }
 .accordion .contentBx .label::before{
     content: '+';
@@ -97,6 +99,44 @@ main{
     overflow-y: auto;
 }
 .accordion .contentBx.active .content{
-    height: 150px;
+    height: fit-content;
+    max-height: 300px;
     padding: 10px;
+    background-color: #e2e2e2;
+}
+.accordion .contentBx.active .content p{
+    display: inline-flex;
+    width: 48%;
+    margin-bottom: 8px;
+    padding: 0;
+    overflow-wrap: break-word;
+    text-indent: 0;
+    text-align: left;
+}
+.accordion .contentBx.active .content p::before{
+    content: '-';
+    padding-right: 10px;
+}
+
+.projetos{
+    margin: 10%;
+}
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    width: 30%;
+    height: 480px;
+    margin-bottom: 10px;
+    border: 1px solid red;
+}
+.card-img{
+    background-color: #000;
+    height: 40%;
+}
+.card-tecs{
+    background-color: #F28705;
+    height: 15%;
 }

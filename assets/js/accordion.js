@@ -1,6 +1,6 @@
 function createList(...list){
     return `
-    <li>${list}</li>
+    <p>${list}</p>
     `
 }
 
@@ -10,9 +10,7 @@ function tec(nameTec,lista){
         <div class="contentBx">
             <div class="label">${nameTec}</div>
             <div class="content">
-            <ul>
-                ${lista}
-            </ul>
+                ${lista}            
             </div>
         </div>
     </div>
@@ -20,7 +18,11 @@ function tec(nameTec,lista){
 }
 
 document.querySelector("#accordion").innerHTML = `
-    ${tec("HTML",createList("a")+createList("b"))}
+    ${tec("HTML")}
+    ${tec("CSS")}
+    ${tec("Javascript")}
+    ${tec("SQL")}
+    ${tec("PHP")}
 `
 
 
