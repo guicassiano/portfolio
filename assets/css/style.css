@@ -8,7 +8,14 @@
     --Laranja-total-4-hex: #260B01;
     --Laranja-total-5-hex: #F2F2F2;    
 }
-
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #F28705;
+    border-radius: 10px;
+}
+/* CABEÇALHO */
 .header{
     width: 100%;
     background-color: #000;
@@ -51,9 +58,11 @@ nav > ul > li{
     transition-duration: 1.8s;
     transition-timing-function: linear;
 }
+/* FIM DO CABEÇALHO */
 
+/* CONTEUDO PRINCIPAL */
 main{
-    margin: 90px 10%;
+    margin: 10%;
 }
 
 .about-me h2, .projetos h2, .content-footer h3{
@@ -70,6 +79,10 @@ main{
 .accordion .contentBx{
     position: relative;
     margin-bottom: 20px;
+}
+.icon-tec{
+    margin-right: 1rem;
+    transform: translate(0,5px);
 }
 .accordion .contentBx .label{
     position: relative;
@@ -118,9 +131,11 @@ main{
     content: '-';
     padding-right: 10px;
 }
+/* FIM DO CONTEUDO PRINCIPAL */
 
+/* PROJETOS */
 .projetos{
-    margin: 10%;
+    margin: 15% 10%;
 }
 .cards{
     display: flex;
@@ -142,6 +157,9 @@ main{
     background-color: #F28705;
     height: 15%;
 }
+/* FIM DOS PROJETOS */
+
+/* RODAPÉ */
 footer{
     background-color: #e2e2e2;
     height: max-content;
@@ -210,23 +228,21 @@ footer{
     transform: scale(1.2);
     transition: all 1s linear;
 }
+/* FIM DO RODAPÉ */
 
-::-webkit-scrollbar{
-    width: 12px;
-}
-::-webkit-scrollbar-thumb{
-    background-color: #F28705;
-    border-radius: 10px;
-}
-
-@media screen and (width <= 770px){
+/* LAYOUT PARA DISPOSITIVOS MENORES DE 800PX */
+@media screen and (width <= 800px){
     .contacts{
         flex: 50%;
     }
 }
+
+/* LAYOUT PARA DISPOSITIVOS MENORES DE 650PX */
 @media screen and (width <= 650px){
+    /* CABEÇALHO */
     .header{
         padding: 10px 5%;
+        position: relative;
     }
    
     header div p{
@@ -238,13 +254,6 @@ footer{
     .icon-menu{
         display: inline;
         margin-top: 10px;
-    }
-
-    .content-footer{
-        flex-direction: column;
-    }
-    .header{
-        position: relative;
     }
     .menu-mobile{
         background-color: #000;
@@ -267,4 +276,18 @@ footer{
     nav > ul > li{
         padding: 0;
     }
+    /* FIM DO CABEÇALHO */
+
+    /* CONTEUDO PRINCIPAL */
+    .accordion .contentBx.active .content p{
+        display: block;
+        width: 100%;
+    }
+    /* FIM DO CONTEUDO PRINCIPAL */
+
+    /* RODAPÉ */
+    .content-footer{
+        flex-direction: column;
+    }
+    /* FIM DO RODAPÉ */
 }
