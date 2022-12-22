@@ -10,6 +10,7 @@
 }
 
 .header{
+    width: 100%;
     background-color: #000;
     display: flex;
     justify-content: space-between;
@@ -17,6 +18,9 @@
     color: var(--Laranja-total-5-hex);
     align-items: center;
     border-bottom: 4px solid #F28705;
+    position: fixed;
+    top: 0;
+    z-index: 99;
 }
 h1{
     text-transform: uppercase;
@@ -33,26 +37,26 @@ nav ul{
 nav > ul > li{
     padding-left: 18px;
 }
-a{
+.nav-item{
     text-decoration: none;
     color: var(--Laranja-total-5-hex);
     font-size: 1.4em;
     text-transform: capitalize;
     transition-property: all;
     transition-duration: 1.8s;
-}
-a:hover{
+}.nav-item:hover{
     border-bottom: 1px solid var(--Laranja-total-5-hex);
     font-size: 1.6em;
     transition-property: all;
     transition-duration: 1.8s;
     transition-timing-function: linear;
 }
+
 main{
     margin: 90px 10%;
 }
 
-.about-me h2, .projetos h2{
+.about-me h2, .projetos h2, .content-footer h3{
     font-size: 2.8em;
     text-transform: capitalize;
     margin-bottom: 10px;
@@ -63,9 +67,6 @@ main{
     text-indent: 1em;
     margin-bottom: 28px;
 }
-/* .accordion{
-    max-width: 100%;
-} */
 .accordion .contentBx{
     position: relative;
     margin-bottom: 20px;
@@ -131,6 +132,7 @@ main{
     height: 480px;
     margin-bottom: 10px;
     border: 1px solid red;
+    cursor: pointer;
 }
 .card-img{
     background-color: #000;
@@ -139,4 +141,130 @@ main{
 .card-tecs{
     background-color: #F28705;
     height: 15%;
+}
+footer{
+    background-color: #e2e2e2;
+    height: max-content;
+    width: 100%;
+    border-top: 4px solid #F28705;
+}
+.content-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.content-footer h3{
+    flex: 100%;
+    text-align: center;
+    margin: 20px;
+}
+.contacts a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8em;
+    cursor: pointer;
+    transition: all 2s linear;
+    margin: 40px 0;
+    text-decoration: none;
+    color: #000;
+}
+.contact-img{
+    border-radius: 100%;
+    padding: 5px;
+    transition: all 2s linear;
+}
+.contacts small{
+    color: #3b3b3b;
+}
+#email-contact{
+    border: 4px solid #e72828;
+}
+#email-contact:hover{
+    background-color: #e72828;
+    transition: all 1s linear;
+}
+#whatsapp-contact{
+    border: 4px solid #29a71a;
+}
+#whatsapp-contact:hover{
+    background-color: #29a71a;
+    transition: all 1s linear;
+}
+#linkedin-contact{
+    border: 4px solid #007ab9;
+}
+#linkedin-contact:hover{
+    background-color: #007ab9;
+    transition: all 1s linear;
+}
+#github-contact{
+    border: 4px solid #5c6bc0;
+}
+#github-contact:hover{
+    background-color: #5c6bc0;
+    transition: all 1s linear;
+}
+.contacts:hover{
+    transform: scale(1.2);
+    transition: all 1s linear;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #F28705;
+    border-radius: 10px;
+}
+
+@media screen and (width <= 770px){
+    .contacts{
+        flex: 50%;
+    }
+}
+@media screen and (width <= 650px){
+    .header{
+        padding: 10px 5%;
+    }
+   
+    header div p{
+        padding-left: 0;
+    }
+    .nav-item{
+        display: none;
+    }
+    .icon-menu{
+        display: inline;
+        margin-top: 10px;
+    }
+
+    .content-footer{
+        flex-direction: column;
+    }
+    .header{
+        position: relative;
+    }
+    .menu-mobile{
+        background-color: #000;
+        transition: all 0.5s linear;
+    }
+    .menu-mobile > ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-mobile > ul > li{
+        width: 100%;
+        text-align: center;
+    }
+    .menu-mobile > ul > li > .nav-item{
+        display: block;
+        padding: 20px 0;
+        border-bottom: 1px solid #f28705;
+    }
+    nav > ul > li{
+        padding: 0;
+    }
 }
