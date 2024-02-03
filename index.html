@@ -4,105 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Guilherme Cassiano</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Portfólio - Guilherme Cassiano</title>
-    <style>
-
-    </style>
 </head>
 <body>
-    <div id="app">
-        <header class="header">
-            <div>
-                <h1>Portfólio</h1>
-                <p>of Guilherme Cassiano</p>
-            </div>
-            <nav>
-                <ul>
-                    <li><a class="nav-item" href="#about-me">sobre mim</a></li>
-                    <li><a class="nav-item" href="#projects">projetos</a></li>
-                    <li><a class="nav-item" href="#contacts">contatos</a></li>
-                    <li><img id="menu" hidden src="assets/img/menu-32.png" alt="icone de menu" class="icon-menu"></li>
-                </ul>
-            </nav>
-        </header>
-
-        <nav id="menuMobile">
+    <header id="header">
+        <h2 id="title">portfólio</h2>
+        <nav id="navbar">
             <ul>
-                <li><a class="nav-item" href="#about-me">sobre mim</a></li>
-                <li><a class="nav-item" href="#projects">projetos</a></li>
-                <li><a class="nav-item" href="#contacts">contatos</a></li>
+                <li class="nav-item"><a href="#">Sobre</a></li>
+                <li class="nav-item"><a href="#">Habilidades</a></li>
+                <li class="nav-item"><a href="#">Projetos</a></li>
+                <li class="nav-item"><a href="#">Contato</a></li>
             </ul>
         </nav>
+        <div id="dark-mode">
+            <input type="radio">
+        </div>
+    </header>
 
- 
-
-        <main id="about-me">
-            <div class="about-me">
-                <h2>sobre mim</h2>
-                <p>Meu nome é Guilherme Cassiano, tive contato com programação pela primeira vez no ensino médio em 2021, apesar de ter gostado da área, só dei o devido foco em 2022 para fazer um TCC.</p>
-                <h2>tecnologias</h2>
-                <p>Logo abaixo está listado as tecnologias que tenho experiência.</p>
-                <div id="accordion">
-                    <!-- Aqui é adicionado as tecnologias no arquivo assets/js/accordion.js -->
-                </div>
-            </div>
-        </main>
-
-        <section id="projects" class="projetos">
-            <h2>projetos</h2>
-            <div class="cards">
-                <a href="projects/nlw-copa/index.html" class="card">
-                    <div class="card-img">
-                        <img src="assets/img/nlw-copa.jpg" alt="">
-                    </div>
-                    <h3>nlw-copa</h3>
-                    <div class="card-tecs">
-                        <span class="tecs">HTML</span><span class="tecs">CSS</span><span class="tecs">JS</span>
-                    </div>
-                    <div class="card-description">
-                        É um projeto desenvolvido em um evento gratuito da Rocketseat, com o objetivo de acelerar a aprendizagem em HTML, CSS e Javascript.
-                    </div>
-                </a>
-            </div>
+    <main id="main">
+        <section id="title-main">
+            <h1>Olá, eu sou o <br> <span>Guilherme Cassiano</span> </h1>
+            <p>Desenvolvedor Front-End</p>
+            <button class="btn btn-cv">Download CV</button>
+            <button class="btn btn-contact">Contato</button>
         </section>
+        <img id="img-main" src="assets/img/close.png" alt="">
+    </main>
 
-        <footer id="contacts">
-            <address class="content-footer">
-                <h3>Contatos</h3>
-                <div class="contacts">
-                    <a href="mailto:guicassiano8@gmail.com" target="_blank">
-                        <img src="assets/img/email.png" alt="icone de email" class="contact-img" id="email-contact">
-                        <p>E-mail</p>
-                        <small>guicassiano8@gmail.com</small>
-                    </a>
-                </div>
-                <div class="contacts">
-                    <a href="https://wa.me/5535998498205" target="_blank">
-                        <img src="assets/img/whatsapp.png" alt="logo whatsapp" class="contact-img" id="whatsapp-contact">
-                        <p>Whatsapp</p>
-                        <small>(35) 99849-8205</small>
-                    </a>
-                </div>
-                <div class="contacts">
-                    <a href="#" target="_blank">
-                        <img src="assets/img/linkedin.png" alt="logo linkedin" class="contact-img" id="linkedin-contact">
-                        <p>Linkedin</p>
-                        <small>@guicassiano</small>
-                    </a>
-                </div>
-                <div class="contacts">
-                    <a href="https://github.com/guicassiano" target="_blank">
-                        <img src="assets/img/github.png" alt="logo github" class="contact-img" id="github-contact">
-                        <p>Github</p>
-                        <small>@guicassiano</small>
-                    </a>
-                </div>
-            </address>
-        </footer>
-    </div>
-
-    <script src="assets/js/accordion.js"></script>
-    <script src="assets/js/menu.js"></script>
+    <section id="about">
+        <h2>Sobre Mim</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, sit dignissimos! Rem aperiam iusto repellat hic explicabo possimus minima veniam, totam sequi molestiae doloremque esse nesciunt repudiandae, magni deserunt eius?</p>
+    </section>
 </body>
 </html>

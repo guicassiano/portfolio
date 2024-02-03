@@ -2,328 +2,139 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    --Laranja-total-1-hex: #F28705;
-    --Laranja-total-2-hex: #733702;
-    --Laranja-total-3-hex: #562600;
-    --Laranja-total-4-hex: #260B01;
-    --Laranja-total-5-hex: #F2F2F2;    
 }
-::-webkit-scrollbar{
-    width: 12px;
-}
-::-webkit-scrollbar-thumb{
-    background-color: #F28705;
-    border-radius: 10px;
-}
-/* CABEÇALHO */
-.header{
-    width: 100%;
-    background-color: #000;
+/* cabeçalho */
+#header{
+    background-color: #13131F;
     display: flex;
     justify-content: space-between;
-    padding: 10px 10%;
-    color: var(--Laranja-total-5-hex);
     align-items: center;
-    border-bottom: 4px solid #F28705;
-    position: fixed;
-    top: 0;
-    z-index: 99;
+    padding: 1.4rem 3rem;
+    border-bottom: 2px solid rgb(255, 160, 36);
+    height: 10vh;
 }
-h1{
+
+/* Titulo */
+#title{
+    color: #fff;
     text-transform: uppercase;
-    font-size: 1.8em;
+    cursor: pointer;
+    flex: 33%;
 }
-header div p{
-    padding-left: 38px;
-    font-size: 1.2em;
+/* Fim do titulo */
+
+/* Navbar */
+#navbar{
+    flex: 33%;
 }
-nav ul{
+
+#navbar ul{
     display: flex;
-    list-style: none;
+    gap: 1.4rem;
 }
-nav > ul > li{
-    padding-left: 18px;
-}
+
 .nav-item{
-    text-decoration: none;
-    color: var(--Laranja-total-5-hex);
-    font-size: 1.4em;
-    text-transform: capitalize;
-    transition-property: all;
-    transition-duration: 1.8s;
-}.nav-item:hover{
-    border-bottom: 1px solid var(--Laranja-total-5-hex);
-    font-size: 1.6em;
-    transition-property: all;
-    transition-duration: 1.8s;
-    transition-timing-function: linear;
-}
-/* FIM DO CABEÇALHO */
-
-/* CONTEUDO PRINCIPAL */
-main{
-    margin: 10%;
+    list-style: none;
+    font-size: 1rem;
 }
 
-.about-me h2, .projetos h2, .content-footer h3, #projects h2{
-    font-size: 2.8em;
-    text-transform: capitalize;
-    margin-bottom: 28px;
+.nav-item:hover{
+    font-size: 1.1rem;
+    border-bottom: 1px solid #fff;
+    transition: font-size 2s, border-bottom 2s;
 }
-.about-me p{
-    font-size: 1.8em;
-    text-align: justify;
-    text-indent: 1em;
-    margin-bottom: 28px;
-}
-.accordion .contentBx{
-    position: relative;
-    margin-bottom: 20px;
-}
-.icon-tec{
-    margin-right: 1rem;
-    transform: translate(0,5px);
-}
-.accordion .contentBx .label{
-    position: relative;
-    padding: 18px;
-    border-radius: 10px 10px 0 0;
-    background-color: #e2e2e2;
-    cursor: pointer;
-    font-weight: bolder;
-    font-size: 1.4em;
-    border-bottom: 3px solid #F28705;
-}
-.accordion .contentBx .label::before{
-    content: '+';
-    position: absolute;
-    top: 20%;
-    right: 20px;
-    font-size: 1.5em;
-}
-.accordion .contentBx.active .label::before{
-    content: '-';
-}
-.accordion .contentBx .content{
-    position: relative;
-    background-color: #fff;
-    height: 0;
-    overflow: hidden;
-    transition: 0.5s;
-    overflow-y: auto;
-}
-.accordion .contentBx.active .content{
-    height: fit-content;
-    max-height: 300px;
-    padding: 10px;
-    background-color: #e2e2e2;
-}
-.accordion .contentBx.active .content p{
-    display: inline-flex;
-    width: 48%;
-    margin-bottom: 8px;
-    padding: 0;
-    overflow-wrap: break-word;
-    text-indent: 0;
-    text-align: left;
-}
-.accordion .contentBx.active .content p::before{
-    content: '-';
-    padding-right: 10px;
-}
-/* FIM DO CONTEUDO PRINCIPAL */
 
-/* PROJETOS */
-.projetos{
-    margin: 15% 10%;
-}
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-.card{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    height: 480px;
-    margin-bottom: 20px;
-    cursor: pointer;
-    background-color: #110f0f;
+.nav-item a{
     color: #fff;
     text-decoration: none;
 }
-.card > h3{
-    font-size: 2em;
-    text-align: center;
-    padding: 10px 0;
-}
-.card-img img{
-    width: 100%;
-    height: 150px;
-}
-.card-tecs{
-    height: 15%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    align-self: center;
-    gap: 10px;
-}
-.tecs{
-    background-color: #fff2;
-    padding: 8px;
-    border-radius: 90px;
-}
-.card-description{
-    font-size: 1.2em;
-    text-align: justify;
-    margin: 0 4%;
-}
-/* FIM DOS PROJETOS */
 
-/* RODAPÉ */
-footer{
-    background-color: #e2e2e2;
-    height: max-content;
-    width: 100%;
-    border-top: 4px solid #F28705;
+/* Fim do navbar */
+
+/* Modo dark */
+#dark-mode{
+    flex: 33%;
+    text-align: right;
 }
-.content-footer{
+/* Fim do modo dark */
+/* Fim do cabeçalho */
+
+/* Conteudo principal */
+#main{
+    background-color: #13131F;
+    height: 90vh;
+    padding: 3rem;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
 }
-.content-footer h3{
-    flex: 100%;
-    text-align: center;
-    margin: 20px;
+
+/* titulo principal */
+#title-main{
+    color: #fff;
+    flex: 50%;
+    font-size: 1.8rem;
 }
-.contacts a{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 1.8em;
+
+#title-main h1 span{
+    color: rgb(255, 160, 36);
+}
+
+#title-main p{
+    color: #fff7;
+    font-size: 1.5rem;
+}
+
+.btn{
+    width: 10rem;
+    padding: 0.4rem;
+    border-radius: 0.9rem;
+    font-weight: bolder;
     cursor: pointer;
-    transition: all 2s linear;
-    margin: 40px 0;
-    text-decoration: none;
+}
+
+.btn-cv{
+    background-color: rgb(255, 160, 36);
+    border-color: transparent;
+}
+
+.btn-cv:hover{
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid rgb(255, 160, 36);
+    transition: all 0.8s;
+}
+
+.btn-contact{
+    background-color: transparent;
+    color: #fff;
+    border-color: rgb(255, 160, 36);
+}
+
+.btn-contact:hover{
+    background-color: rgb(255, 160, 36);
     color: #000;
+    border-color: transparent;
+    transition: all 0.8s;
 }
-.contact-img{
-    border-radius: 100%;
-    padding: 5px;
-    transition: all 2s linear;
-}
-.contacts small{
-    color: #3b3b3b;
-}
-#email-contact{
-    border: 4px solid #e72828;
-}
-#email-contact:hover{
-    background-color: #e72828;
-    transition: all 1s linear;
-}
-#whatsapp-contact{
-    border: 4px solid #29a71a;
-}
-#whatsapp-contact:hover{
-    background-color: #29a71a;
-    transition: all 1s linear;
-}
-#linkedin-contact{
-    border: 4px solid #007ab9;
-}
-#linkedin-contact:hover{
-    background-color: #007ab9;
-    transition: all 1s linear;
-}
-#github-contact{
-    border: 4px solid #5c6bc0;
-}
-#github-contact:hover{
-    background-color: #5c6bc0;
-    transition: all 1s linear;
-}
-.contacts:hover{
-    transform: scale(1.2);
-    transition: all 1s linear;
-}
-/* FIM DO RODAPÉ */
+/* Fim do titulo principal */
 
-/* LAYOUT PARA DISPOSITIVOS MENORES DE 800PX */
-@media screen and (width <= 1000px){
-    .contacts{
-        flex: 50%;
-    }
 
-    .card{
-        width: calc(50% - 20px);
-    }
+/* Fim do conteudo principal */
+
+/* Sobre mim */
+#about{
+    background-color: #13131F;
+    padding: 3rem;
+    text-align: center;
 }
 
-/* LAYOUT PARA DISPOSITIVOS MENORES DE 650PX */
-@media screen and (width <= 650px){
-    /* CABEÇALHO */
-    .header{
-        padding: 10px 5%;
-        position: relative;
-    }
-   
-    header div p{
-        padding-left: 0;
-    }
-    .nav-item{
-        display: none;
-    }
-    .icon-menu{
-        display: inline;
-        margin-top: 10px;
-    }
-    .menu-mobile{
-        background-color: #000;
-        transition: all 0.5s linear;
-    }
-    .menu-mobile > ul{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .menu-mobile > ul > li{
-        width: 100%;
-        text-align: center;
-    }
-    .menu-mobile > ul > li > .nav-item{
-        display: block;
-        padding: 20px 0;
-        border-bottom: 1px solid #f28705;
-    }
-    nav > ul > li{
-        padding: 0;
-    }
-    /* FIM DO CABEÇALHO */
-
-    /* CONTEUDO PRINCIPAL */
-    .accordion .contentBx.active .content p{
-        display: block;
-        width: 100%;
-    }
-    /* FIM DO CONTEUDO PRINCIPAL */
-
-    .cards{
-        flex-direction: column;
-    }
-    .card{
-        width: 100%;
-    }
-
-    /* RODAPÉ */
-    .content-footer{
-        flex-direction: column;
-    }
-    /* FIM DO RODAPÉ */
+#about h2{
+    color: #fff;
+    font-size: 2.7rem;
 }
+
+#about p{
+    color: #fff7;
+    text-align: justify;
+}
+/* Fim do sobre mim */
