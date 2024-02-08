@@ -3,6 +3,21 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+::-webkit-scrollbar{
+    width: 12px;
+    background-color: #13131F;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(255, 160, 36);
+    border-radius: 10px;
+}
+
+h2{
+    font-size: 2.7rem;
+    color: #fff;
+}
+
 /* cabeçalho */
 #header{
     background-color: #13131F;
@@ -20,6 +35,7 @@
     text-transform: uppercase;
     cursor: pointer;
     flex: 33%;
+    font-size: 1.6rem;
 }
 /* Fim do titulo */
 
@@ -128,13 +144,113 @@
     text-align: center;
 }
 
-#about h2{
-    color: #fff;
-    font-size: 2.7rem;
-}
-
 #about p{
     color: #fff7;
     text-align: justify;
 }
 /* Fim do sobre mim */
+
+/* Habilidades */
+#skills{
+    background-color: #13131F;
+    text-align: center;
+    padding: 3rem;
+}
+
+#skills ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+}
+
+.skill{
+    list-style: none;
+    color: rgb(255, 160, 36);
+    background-color: #2d2d3b;
+    width: 8.5rem;
+    height: 8.5rem;
+    border-bottom: 4px solid rgb(255, 160, 36);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.skill-img{
+    width: 4rem;
+}
+
+#projects{
+    background-color: #13131F;
+    text-align: center;
+    padding: 3rem;
+}
+
+/* RODAPÉ */
+footer{
+    background-color: #13131F;
+    height: max-content;
+    width: 100%;
+    border-top: 4px solid #F28705;
+}
+.content-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.content-footer h2{
+    flex: 100%;
+    margin: 20px;
+    text-align: center;
+}
+.contacts a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8em;
+    cursor: pointer;
+    transition: all 2s linear;
+    margin: 40px 0;
+    text-decoration: none;
+    color: #fffc;
+}
+.contact-img{
+    border-radius: 100%;
+    padding: 5px;
+    transition: all 2s linear;
+}
+.contacts small{
+    color: #fff5;
+}
+#email-contact{
+    border: 4px solid #e72828;
+}
+#email-contact:hover{
+    background-color: #e72828;
+    transition: all 1s linear;
+}
+#whatsapp-contact{
+    border: 4px solid #29a71a;
+}
+#whatsapp-contact:hover{
+    background-color: #29a71a;
+    transition: all 1s linear;
+}
+#linkedin-contact{
+    border: 4px solid #007ab9;
+}
+#linkedin-contact:hover{
+    background-color: #007ab9;
+    transition: all 1s linear;
+}
+#github-contact{
+    border: 4px solid #5c6bc0;
+}
+#github-contact:hover{
+    background-color: #5c6bc0;
+    transition: all 1s linear;
+}
+/* FIM DO RODAPÉ */
