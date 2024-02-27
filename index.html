@@ -10,8 +10,18 @@
 </head>
 <body>
     <div id="fade" class="hide"></div>
-
+<nav id="navbar-mobile">
+            <ul>
+                <li class="nav-item"><a href="#about">Sobre</a></li>
+                <li class="nav-item"><a href="#skills">Habilidades</a></li>
+                <li class="nav-item"><a href="#projects">Projetos</a></li>
+                <li class="nav-item"><a href="#contacts">Contato</a></li>
+            </ul>
+        </nav>
     <header id="header">
+        <img id="menu-mobile" src="assets/img/menu-32.png" alt="">
+        <img id="menu-mobile-close" src="assets/img/close.png" alt="">
+        
         <h2 id="title"> <a href="#main">portfólio</a> </h2>
         <nav id="navbar">
             <ul>
@@ -34,8 +44,8 @@
         <section id="title-main">
             <h1>Olá, eu sou o <br> <span>Guilherme Cassiano</span> </h1>
             <p>Desenvolvedor Front-End</p>
-            <button class="btn btn-cv">Download CV</button>
-            <button class="btn btn-contact">Contato</button>
+            <button class="btn btn-cv"> <a href="./assets/Currículo.pdf" download> Download CV</a></button>
+            <button class="btn btn-contact"><a href="https://wa.me/5535998498205">Contato</a>  </button>
         </section>
         <img id="img-main" src="assets/img/img-main.jpeg" alt="">
     </main>
@@ -63,43 +73,8 @@
     </section>
 
     <section id="projects">
-        <h2>Projetos</h2>
-        <div class="card-project">
-            <div class="card-body">
-                <p>nlw copa</p>
-                <div class="icon-skill">
-                    <img src="./assets/img/html-5.png" alt="">
-                    <img src="./assets/img/css-3.png" alt="">
-                </div>
-            </div>
-            <div class="card-footer">
-                <button id="open-modal" class="btn-more">ver mais</button>
-            </div>
-        </div>
+        
     </section>
-    
-    <div id="modal" class="hide">
-        <div class="img-modal">
-            <img src="./assets/img/nlw-copa.jpg" alt="">
-        </div>
-
-        <div class="texts-modal">
-            <div class="header-text">
-                <h3>Title</h3>
-                <button id="close-modal"><img src="./assets/img/close.png" alt="Botão de fechar"></button>
-            </div>
-            <div class="modal-paragrafo">
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam, nam vitae. Incidunt quidem optio qui pariatur, maxime minima fuga sequi facere atque, itaque eos consequuntur voluptate quibusdam omnis rem voluptatum.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, dolores quae eveniet quidem explicabo sunt excepturi vero impedit reprehenderit, dolore eligendi rerum ea quia voluptates corporis a, ab placeat sapiente.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, dolores quae eveniet quidem explicabo sunt excepturi vero impedit reprehenderit, dolore eligendi rerum ea quia voluptates corporis a, ab placeat sapiente.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur, dolores quae eveniet quidem explicabo sunt excepturi vero impedit reprehenderit, dolore eligendi rerum ea quia voluptates corporis a, ab placeat sapiente.</p>
-            </div>
-        </div>
-        <div class="btn-modal">
-            <!-- <button class="btn-project">Acessar Projeto</button> -->
-            <button class="btn-repositorio">Acessar Repositório</button>
-        </div>
-    </div>
 
     <footer id="contacts">
         <div class="content-footer">
@@ -120,7 +95,7 @@
                 </a>
             </div>
             <div class="contacts">
-                <a href="#" target="_blank">
+                <a href="https://www.linkedin.com/in/guilherme-cassiano-400b6326b/" target="_blank">
                     <img src="assets/img/linkedin.png" alt="logo linkedin" class="contact-img" id="linkedin-contact">
                     <p>Linkedin</p>
                     <small>@guicassiano</small>
@@ -137,7 +112,8 @@
         </address>
     </footer>
 
-    <script src="./assets/js/modal.js"></script>
     <script src="./assets/js/dark-mode.js"></script>
+    <script src="./assets/js/projects.js"></script>
+    <script src="./assets/js/menu-mobile.js"></script>
 </body>
 </html>
