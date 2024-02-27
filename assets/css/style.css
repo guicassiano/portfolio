@@ -13,9 +13,10 @@
     border-radius: 10px;
 }
 
-h2{
+section h2{
     font-size: 2.7rem;
     color: #fff;
+    margin-bottom: 4rem;
 }
 
 /* cabeçalho */
@@ -24,18 +25,29 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.4rem 3rem;
+    padding: 1.4rem 12%;
     border-bottom: 2px solid rgb(255, 160, 36);
     height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.3s;
+    z-index: 5;
 }
 
 /* Titulo */
 #title{
-    color: #fff;
     text-transform: uppercase;
     cursor: pointer;
     flex: 33%;
     font-size: 1.6rem;
+}
+
+#title a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
 }
 /* Fim do titulo */
 
@@ -52,12 +64,13 @@ h2{
 .nav-item{
     list-style: none;
     font-size: 1rem;
+    transition: 0.5s;
 }
 
 .nav-item:hover{
-    font-size: 1.1rem;
+    transform: scale(1.2);
     border-bottom: 1px solid #fff;
-    transition: font-size 2s, border-bottom 2s;
+    transition: all 2s;
 }
 
 .nav-item a{
@@ -72,6 +85,19 @@ h2{
     flex: 33%;
     text-align: right;
 }
+
+input[type="checkbox"]{
+    display: none;
+}
+
+.bi{
+    color: #fff;
+    cursor: pointer;
+}
+
+.bi-sun{
+    display: none;
+}
 /* Fim do modo dark */
 /* Fim do cabeçalho */
 
@@ -79,7 +105,7 @@ h2{
 #main{
     background-color: #13131F;
     height: 90vh;
-    padding: 3rem;
+    padding: 12%;
     display: flex;
     align-items: center;
 }
@@ -111,6 +137,7 @@ h2{
 .btn-cv{
     background-color: rgb(255, 160, 36);
     border-color: transparent;
+    transition: 0.7s;
 }
 
 .btn-cv:hover{
@@ -124,6 +151,7 @@ h2{
     background-color: transparent;
     color: #fff;
     border-color: rgb(255, 160, 36);
+    transition: 0.7s;
 }
 
 .btn-contact:hover{
@@ -132,21 +160,28 @@ h2{
     border-color: transparent;
     transition: all 0.8s;
 }
+
+#img-main{
+    width: 20rem;
+    border: .3rem solid #F28705;
+    border-radius: 100%;
+}
 /* Fim do titulo principal */
 
-
-/* Fim do conteudo principal */
 
 /* Sobre mim */
 #about{
     background-color: #13131F;
-    padding: 3rem;
+    padding: 12%;
     text-align: center;
+    padding-bottom: 5rem;
 }
 
 #about p{
     color: #fff7;
     text-align: justify;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 /* Fim do sobre mim */
 
@@ -154,7 +189,8 @@ h2{
 #skills{
     background-color: #13131F;
     text-align: center;
-    padding: 3rem;
+    padding: 12%;
+    padding-bottom: 5rem;
 }
 
 #skills ul{
@@ -176,6 +212,12 @@ h2{
     justify-content: center;
     cursor: pointer;
     margin: 1rem;
+    transition: 0.6s;
+}
+
+.skill:hover{
+    transform: scale(1.2,1.2);
+    transition: transform 0.6s linear;
 }
 
 .skill-img{
@@ -184,10 +226,179 @@ h2{
 
 #projects{
     background-color: #13131F;
-    text-align: center;
-    padding: 3rem;
+    padding: 12%;
+    padding-bottom: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
 }
 
+#projects h2{
+    text-align: center;
+    flex: 100%;
+}
+
+.card-project{
+    width: 45%;
+    height: 16rem;
+    cursor: pointer;
+    transition: 0.6s;
+    background-image: url("../img/nlw-copa.jpg");
+    background-size: 100%;
+    background-color: #2d2d3b;
+    background-repeat: no-repeat;
+    opacity: .8;
+    border-radius: 0 0 1rem 1rem;
+    z-index: 1;
+}
+
+.card-project:hover{
+    transform: scale(1.2,1.2);
+    transition: 0.6s;
+}
+
+.card-body{
+    height: 82%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: .2rem solid #F28705;
+}
+
+.card-body p{
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: .8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.icon-skill img{
+    width: 1.8rem;
+}
+
+.card-footer{
+    background-color: #2d2d3b;
+    height: 18%;
+    text-align: right;
+    padding: .6rem 1rem;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.btn-more{
+    border: none;
+    border-bottom: .2rem solid #F28705;
+    color: #F28705;
+    background-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.btn-more:hover{
+    transform: scale(1.2,1.2);
+    transition: 0.6s;
+}
+
+#fade, #modal{
+    transition: 0.6s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #13131F;
+    z-index: 10;
+    width: 80%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.hide{
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+.img-modal{
+    flex: calc(50% - 2rem);
+}
+
+.img-modal img{
+    width: 100%;
+}
+
+.texts-modal{
+    flex: calc(50% - 2rem);
+}
+
+.header-text{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.header-text h3{
+    font-size: 2rem;
+    color: #F28705;
+    text-transform: uppercase;
+}
+
+#close-modal{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+#close-modal img{
+    width: 1.6rem;
+}
+
+.modal-paragrafo{
+    color: #fff7;
+    font-size: 1.1rem;
+    overflow-y: scroll;
+    text-overflow: ellipsis;
+    height:18rem;
+}
+
+.btn-modal button{
+    background-color: #F28705;
+    border: none;
+    cursor: pointer;
+    width: 10rem;
+    padding: .6rem 0;
+    border-radius: 1rem;
+    margin-right: .8rem;
+    font-size: .9rem;
+    font-weight: bolder;
+    transition: 0.6s;
+}
+
+.btn-modal button:hover{
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid rgb(255, 160, 36);
+    transition: all 0.8s;
+}
 /* RODAPÉ */
 footer{
     background-color: #13131F;
@@ -205,6 +416,8 @@ footer{
     flex: 100%;
     margin: 20px;
     text-align: center;
+    color: #fff;
+    font-size: 2.7rem;
 }
 .contacts a{
     display: flex;
@@ -254,3 +467,62 @@ footer{
     transition: all 1s linear;
 }
 /* FIM DO RODAPÉ */
+
+
+/* MODO LIGHT */
+
+.light{
+    background-color: #eee !important;
+    color: #000 !important;
+    transition: 0.3s !important;
+}
+
+.btn-cv.light{
+    background-color: rgb(255, 160, 36) !important;
+}
+
+.btn-cv.light:hover,
+.btn-repositorio:hover{
+    background-color: transparent !important;
+    color: #000 !important;
+    border: 1px solid rgb(255, 160, 36) !important;
+}
+
+.btn-contact.light{
+    background-color: transparent !important;
+    color: #000 !important;
+    border-color: rgb(255, 160, 36) !important;
+    transition: 0.7s !important;
+}
+
+.btn-contact.light:hover{
+    background-color: rgb(255, 160, 36)  !important;
+    color: #000 !important;
+    border-color: transparent !important;
+    transition: all 0.8s !important;
+}
+
+.skill.light{
+    background-color: #ccc !important;    
+}
+
+.card-project.light
+,.card-footer.light{
+    background-color: #ccc !important;
+    opacity: 1;
+}
+
+.card-body p.light{
+    background-color: transparent !important;
+    color: #F28705 !important;
+    font-size: 2rem !important;
+    font-weight: 900 !important;
+}
+
+.bi-sun.light{
+    display: block;
+}
+
+.bi-moon.light{
+    display: none;
+}
