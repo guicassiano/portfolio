@@ -279,13 +279,31 @@ input[type="checkbox"]{
     height: 16rem;
     cursor: pointer;
     transition: 0.6s;
-    background-image: url("../img/nlw-copa.jpg");
     background-size: 100%;
     background-color: #2d2d3b;;
     background-repeat: no-repeat;
     opacity: .8;
     border-radius: 0 0 1rem 1rem;
     z-index: 1;
+}
+
+#cardFetchApi{
+    background-image: url("../img/fetch-api.png");
+}
+#cardNlwCopa{
+    background-image: url("../img/nlw-copa.jpg");
+}
+#cardDarkMode{
+    background-image: url("../img/dark-mode.png");
+}
+#cardCalculadora{
+    background-image: url("../img/calculadora.png");
+}
+#cardCronometro{
+    background-image: url("../img/cronometro.png");
+}
+#cardRelogioDigital{
+    background-image: url("../img/relogio-digital.png");
 }
 
 
@@ -303,12 +321,12 @@ input[type="checkbox"]{
     border-bottom: .2rem solid #F28705;
 }
 
-.card-body p{
-    color: #fff;
-    font-size: 1.6rem;
-    margin-bottom: .8rem;
+.card-footer p{
+    color: #F28705;
+    font-size: 1rem;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 900;
+    text-shadow: 1px 1px 1px 1px #000;
 }
 
 .icon-skill img{
@@ -316,6 +334,9 @@ input[type="checkbox"]{
 }
 
 .card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #2d2d3b;
     height: 18%;
     text-align: right;
